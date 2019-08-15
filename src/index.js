@@ -87,7 +87,7 @@ const autoSizeInput = function (element, options) {
 
 exports.install = function(Vue) {
   Vue.directive('autosize', {
-    bind: function(el, binding) {
+    inserted: function(el, binding) {
       var tagName = el.tagName
       if (tagName == 'TEXTAREA') {
         autosize(el)
